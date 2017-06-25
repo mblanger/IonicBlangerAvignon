@@ -5,13 +5,16 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2> Bienvenue sur l'application de photos géolocalisées !!</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Cette application sauvegarde les photos ainsi que leurs coordonnées
+    dans le but d'afficher leur emplacement sur une Google Maps.
   </p>
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+    Photos disponibles :
   </p>
+
+  <ion-item *ngFor="let picture of pictures; let i = index">
+    <img [src]="picture" style="height: 100px;"/>
+  </ion-item>
 </ion-content>
